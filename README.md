@@ -2,6 +2,9 @@
 
 This project provides a React-based dashboard application using Vite for fast development and builds. The dashboard fetches and displays music data from Spotify, specifically focusing on tracks released in India in 2023.
 
+## Demo/Deployed Link
+You can view the demo from here. [Spotify Dashboard](https://spotify-dashboard-prakash-kumars-projects-22d56ce3.vercel.app/)
+
 ## Features
 
 - **Spotify Integration**: Fetches and displays tracks from Spotify's API.
