@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchSongsFromIndia2023 } from "../api/spotifyService";
-import { Bar, Line, Pie } from "react-chartjs-2";
 import "chart.js/auto";
+import { Bar, Line, Pie } from "react-chartjs-2";
 
 const Dashboard = () => {
   const [error, setError] = useState(null);
@@ -56,13 +56,6 @@ const Dashboard = () => {
         datasets: [
           {
             data: Object.values(artistCounts),
-            backgroundColor: [
-              "#FF6384",
-              "#36A2EB",
-              "#FFCE56",
-              "#4BC0C0",
-              "#9966FF",
-            ],
             hoverOffset: 4,
           },
         ],
@@ -77,7 +70,12 @@ const Dashboard = () => {
       <div className="chart-container">
         {chartData.bar && <Bar data={chartData.bar} />}
         {chartData.line && <Line data={chartData.line} />}
-        {chartData.pie && <Pie data={chartData.pie} />}
+        {chartData.pie && (
+          <>
+            <h3>Number of Songs by Artist - Pie Chart</h3>{" "}
+            <Pie data={chartData.pie} />
+          </>
+        )}
       </div>
     </div>
   );
